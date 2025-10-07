@@ -1,2 +1,33 @@
-node_modules
-package-lock.json
+# Dependencies
+node_modules/
+
+# Test results
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Screenshots
+*.png
+*.jpg
+*.webm
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.local
+
+# Build output
+dist/
+build/
+coverage/
