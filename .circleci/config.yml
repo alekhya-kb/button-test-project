@@ -1,0 +1,32 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: mcr.microsoft.com/playwright:v1.40.0-focal
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Run Playwright tests
+          command: npx playwright test
+      - store_artifacts:
+          path: playwright-report
+          destination: playwright-report
+      - store_test_results:
+          path: test-results
+
+workflows:
+  test:
+    jobs:
+      - test
