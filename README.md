@@ -8,13 +8,15 @@ Simple button application that displays text on click, tested with Playwright in
 
 ## Project Structure
 button-test-project/
-├── index.html # Main webpage
-├── circleci/
-│ └── config.yml # configuration file for circleci
+├── .circleci/
+│   └── config.yml          # CircleCI configuration
+├── index.html          # Main application file
 ├── tests/
-│ └── button.test.js # Unit test for the button behavior
-├── package.json # npm dependencies and scripts
-└── README.md # Project documentation
+│   └── button.test.js      # Playwright test suite
+├── .gitignore
+├── package.json
+├── playwright.config.js    # Playwright configuration
+└── README.md
 
 ## Technologies Used
 - HTML/JavaScript
@@ -31,8 +33,15 @@ button-test-project/
 
 ## Run the app locally
 - npx http-server
+  
 ## Run the tests
 - npm test
+
+## Run tests with visible browser
+- npx playwright test --headed
+
+## Install Playwright browsers
+- npx playwright install chromium
 
 
 
