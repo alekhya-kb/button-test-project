@@ -7,16 +7,19 @@ https://github.com/alekhya-kb/button-test-project.git
 Simple button application that displays text on click, tested with Playwright in Chromium browser.
 
 ## Project Structure
+
+```
 button-test-project/
 ├── .circleci/
 │   └── config.yml          # CircleCI configuration
-├── index.html          # Main application file
+├── index.html              # Main application file
 ├── tests/
 │   └── button.test.js      # Playwright test suite
 ├── .gitignore
 ├── package.json
 ├── playwright.config.js    # Playwright configuration
 └── README.md
+```
 
 ## Technologies Used
 - HTML/JavaScript
@@ -29,19 +32,13 @@ button-test-project/
 - Automated testing on every push
 
 ## Install Dependencies
-- npm install
+`npm install`
 
 ## Run the app locally
-- npx http-server
+`npx http-server`
   
 ## Run the tests
-- npm test
-
-## Run tests with visible browser
-- npx playwright test --headed
-
-## Install Playwright browsers
-- npx playwright install chromium
+`npm test`
 
 
 
