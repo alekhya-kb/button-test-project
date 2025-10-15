@@ -15,19 +15,3 @@ playwright/.cache/
 *.log
 npm-debug.log*
 
-# OS files
-.DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-
-# Environment
-.env
-.env.local
-
-# Build output
-dist/
-build/
-coverage/
